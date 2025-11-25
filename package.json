@@ -7,14 +7,24 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "calculate-durations": "node scripts/calculateAudioDurations.js"
+    "calculate-durations": "node scripts/calculateAudioDurations.js",
+    "remotion:studio": "remotion studio src/remotion/index.ts",
+    "remotion:render": "remotion render src/remotion/index.ts ThePilgrim out/pilgrim.mp4",
+    "remotion:render-webm": "remotion render src/remotion/index.ts ThePilgrim out/pilgrim.webm",
+    "render-chapters": "node scripts/renderChapters.js",
+    "merge-chapters": "node scripts/mergeChapters.js",
+    "render-parallel": "npm run render-chapters && npm run merge-chapters"
   },
   "dependencies": {
     "@google/genai": "^1.30.0",
+    "@remotion/bundler": "^4.0.377",
+    "@remotion/cli": "^4.0.377",
+    "@remotion/renderer": "^4.0.377",
     "framer-motion": "^11.13.1",
     "lucide-react": "^0.554.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "remotion": "^4.0.377"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

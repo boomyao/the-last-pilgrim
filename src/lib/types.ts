@@ -22,7 +22,3 @@ export interface Chapter {
   tracks: Track[];
 }
 
-export enum AppState {
-  INTRO = 'INTRO',
-  VIEWING = 'VIEWING',
-}
