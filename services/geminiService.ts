@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 // Helper to get the AI client. 
 // Note: We recreate this to ensure we pick up the key if it was just selected.
 const getClient = () => {
-  const apiKey = process.env.API_KEY || 'AIzaSyDLR_AZWUZd5tglgcMXs7q-zHhtKGxBpHo';
+  const apiKey = process.env.API_KEY;
   if (!apiKey) {
     throw new Error("API Key not found");
   }
